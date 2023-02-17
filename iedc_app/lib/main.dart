@@ -20,13 +20,21 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+ 
+  int selected_index = 0;
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Container(
         width: width,
@@ -40,7 +48,7 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SafeArea(
-                  child:Container(
+                  child: Container(
                     margin: EdgeInsets.only(left: 5, top: 5),
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.black, width: 3),
@@ -62,6 +70,7 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
+      
     );
   }
 }
