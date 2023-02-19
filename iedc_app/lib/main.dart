@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iedc_app/widgets/bottomnavigate.dart';
 import 'package:iedc_app/widgets/imgurl.dart';
 
 void main() {
@@ -28,7 +29,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
- 
   int selected_index = 0;
   @override
   Widget build(BuildContext context) {
@@ -36,41 +36,41 @@ class _HomeState extends State<Home> {
     final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      appBar: buildAppbar(),
+     // drawer: NavigateDrawer(),
       body: Container(
         width: width,
         height: height,
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: NetworkImage(homeimg), fit: BoxFit.contain)),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SafeArea(
-                  child: Container(
-                    margin: EdgeInsets.only(left: 5, top: 5),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black, width: 3),
-                      shape: BoxShape.circle,
-                    ),
-                    child: ClipRRect(
-                      child: Image.network(
-                        homeimg,
-                        fit: BoxFit.cover,
-                        width: 50,
-                        height: 50,
-                      ),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
-                )
-              ],
-            )
-          ],
-        ),
       ),
-      
+    );
+  }
+
+  AppBar buildAppbar() {
+    return AppBar(
+      toolbarHeight: 60,
+      actions: [
+        SafeArea(
+          child: Container(
+            margin: EdgeInsets.only(left: 5, top: 5),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black, width: 3),
+              shape: BoxShape.circle,
+            ),
+            child: ClipRRect(
+              child: Image.network(
+                homeimg,
+                fit: BoxFit.cover,
+                width: 50,
+                height: 50,
+              ),
+              borderRadius: BorderRadius.circular(80),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
