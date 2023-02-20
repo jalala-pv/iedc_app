@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iedc_app/widgets/bottomnavigate.dart';
 import 'package:iedc_app/widgets/imgurl.dart';
-
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 void main() {
   runApp(MyApp());
 }
