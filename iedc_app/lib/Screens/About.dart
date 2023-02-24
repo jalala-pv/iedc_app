@@ -12,8 +12,11 @@ class AboutScreen extends StatelessWidget {
     final double size = 40;
     return ListView(
       children: [
-       Containerpage(url: logo, height: height, width: width),
-       Containerpage(url: logo, height: height/3, width: width/3),
+        Containerpage(url: logo, height: height, width: width),
+        Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Containerpage(url: logo, height: height / 3, width: width / 3),
+        ),
         Center(
           child: Column(
             children: [
@@ -46,7 +49,7 @@ class AboutScreen extends StatelessWidget {
         SizedBox(
           height: 30,
         ),
-        Containerpage(url: logo, height: height/1.5, width: width)
+        Containerpage(url: logo, height: height / 1.5, width: width)
       ],
     );
   }
