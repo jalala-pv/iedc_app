@@ -54,7 +54,6 @@ class _HomeState extends State<Home> {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: buildAppbar(),
-        // drawer: NavigateDrawer(),
         body: pages[selectedindex],
         bottomNavigationBar: BottomNavigationBar(
             onTap: (index) {
