@@ -4,9 +4,7 @@ import 'package:iedc_app/Screens/Contacts.dart';
 import 'package:iedc_app/Screens/Home.dart';
 import 'package:iedc_app/Screens/Team.dart';
 import 'package:iedc_app/widgets/assets.dart';
-
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-
 import 'Screens/About.dart';
 import 'Screens/Events.dart';
 
@@ -44,7 +42,7 @@ class _HomeState extends State<Home> {
     EventScreen(),
     Achievements(),
     Team(),
-    Contacts()
+    Contacts(),
   ];
   @override
   Widget build(BuildContext context) {
