@@ -5,7 +5,6 @@ import 'package:iedc_app/Screens/Home.dart';
 import 'package:iedc_app/Screens/Team.dart';
 import 'package:iedc_app/widgets/assets.dart';
 
-
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'Screens/About.dart';
@@ -104,5 +103,4 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-
 }
