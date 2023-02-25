@@ -6,11 +6,13 @@ class headdes extends StatelessWidget {
   String title;
   String subtitle;
   dynamic desc;
+  Color color;
 
   headdes({
     required this.title,
     required this.subtitle,
     required this.desc,
+    this.color=Colors.black
   });
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class headdes extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 30),
             child: Text(title,
-                style: headingstyle(font * 70)),
+                style: headingstyle(font * 70,color)),
           ),
           Text(
             subtitle,
@@ -32,7 +34,7 @@ class headdes extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(30.0),
-            child: Text(desc, style: desstyle(font * 20)),
+            child: Text(desc, style: desstyle(font * 20,color)),
           ),
         ],
       ),

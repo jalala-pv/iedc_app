@@ -62,7 +62,7 @@ class AboutScreen extends StatelessWidget {
           padding: const EdgeInsets.all(30.0),
           child: Containerpage(url: logo, height: height / 2, width: width / 3),
         ),
-     Container(color:Colors.green[300],child: headdes(title: 'OUR OBJECTIVES', subtitle: '', desc: 'To design and develop innovative products of social relevance.\nTo build a strong student community that is on par with the current industry\nTo set up an ecosystem that boosts innovative ideas among students\nTo provide ample oppurtunities for students to explore various domains\nEncourage more women entrepreneurs.\nTo promote start-up initiatives from Faculty and Students.'))
+     Container(color:Colors.purple[700],child: headdes(title: 'OUR OBJECTIVES', subtitle: '', desc: 'To design and develop innovative products of social relevance.\nTo build a strong student community that is on par with the current industry\nTo set up an ecosystem that boosts innovative ideas among students\nTo provide ample oppurtunities for students to explore various domains\nEncourage more women entrepreneurs.\nTo promote start-up initiatives from Faculty and Students.',color: Colors.white,))
       ],
     );
   }
