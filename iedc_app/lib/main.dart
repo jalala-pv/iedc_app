@@ -8,6 +8,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'Screens/About.dart';
 import 'Screens/Events.dart';
 
+
 void main() {
   runApp(MyApp());
 }
