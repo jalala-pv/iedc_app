@@ -54,6 +54,7 @@ class _HomeState extends State<Home> {
         appBar: buildAppbar(),
         body: pages[selectedindex],
         bottomNavigationBar: BottomNavigationBar(
+
             onTap: (index) {
               setState(() {
                 selectedindex = index;
@@ -61,8 +62,8 @@ class _HomeState extends State<Home> {
             },
             showUnselectedLabels: true,
             currentIndex: selectedindex,
-            backgroundColor: Colors.black,
-            selectedItemColor: Colors.grey,
+           
+           selectedItemColor: Colors.blue,
             unselectedItemColor: Colors.black,
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
