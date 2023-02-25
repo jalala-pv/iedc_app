@@ -8,12 +8,11 @@ class headdes extends StatelessWidget {
   dynamic desc;
   Color color;
 
-  headdes({
-    required this.title,
-    required this.subtitle,
-    required this.desc,
-    this.color=Colors.black
-  });
+  headdes(
+      {required this.title,
+      required this.subtitle,
+      required this.desc,
+      this.color = Colors.black});
   @override
   Widget build(BuildContext context) {
     final font = MediaQuery.textScaleFactorOf(context);
@@ -22,8 +21,7 @@ class headdes extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 30),
-            child: Text(title,
-                style: headingstyle(font * 70,color)),
+            child: Text(title, style: headingstyle(font * 70, color)),
           ),
           Text(
             subtitle,
@@ -34,7 +32,7 @@ class headdes extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(30.0),
-            child: Text(desc, style: desstyle(font * 20,color)),
+            child: Text(desc, style: desstyle(font * 20, color)),
           ),
         ],
       ),
