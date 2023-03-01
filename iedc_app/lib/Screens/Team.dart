@@ -13,13 +13,22 @@ class Team extends StatelessWidget {
             children: [
               Positioned(
                   child: Container(
-                width: width / 1.5,
-                height: height / 5,
+                width: width / 1.4,
+                height: height / 4,
                 color: Colors.blue,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 50),
+                      child: Text('muneer'),
+                    ),
+                  ],
+                ),
               )),
               Positioned(
-                  bottom: 70,
-                  left: 70,
+                  bottom: 90,
+                  left: 80,
                   child: Container(
                     width: width / 3,
                     height: height / 4,
