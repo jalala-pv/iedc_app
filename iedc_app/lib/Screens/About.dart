@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iedc_app/widgets/ContainerPage.dart';
 import 'package:iedc_app/widgets/assets.dart';
 import 'package:iedc_app/widgets/headdes.dart';
-import 'package:iedc_app/widgets/objective.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -63,8 +62,46 @@ class AboutScreen extends StatelessWidget {
           padding: const EdgeInsets.all(30.0),
           child: Containerpage(url: logo, height: height / 2, width: width / 3),
         ),
-Objectives(),
+        Objectives(context),
       ],
+    );
+  }
+
+  Widget Objectives(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
+
+    List<String> str = [
+      'to design and develop innovative products of social relevance.',
+      'To build a strong student community that is on par with the current industry,',
+      'to design and develop innovative products',
+      'to design and develop innovative products',
+      'to design and develop innovative products',
+      'to design and develop innovative products',
+      'to design and develop innovative products',
+      'to design and develop innovative products',
+    ];
+
+    return Container(
+      color: Colors.purple,
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Text('our object'),
+          ),
+          ListView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              itemCount: str.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: Icon(Icons.abc),
+                  title: Text(str[index]),
+                );
+              })
+        ],
+      ),
     );
   }
 }
