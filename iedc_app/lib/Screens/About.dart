@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iedc_app/widgets/ContainerPage.dart';
 import 'package:iedc_app/widgets/assets.dart';
+import 'package:iedc_app/widgets/googlefonts.dart';
 import 'package:iedc_app/widgets/headdes.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -10,13 +11,14 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
+    final font = MediaQuery.textScaleFactorOf(context);
 
     return ListView(
       children: [
         Containerpage(url: logo, height: height, width: width),
         Padding(
           padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 3, width: width / 3),
+          child: Containerpage(url: logo, height: height / 3, width: width ),
         ),
         headdes(
             title: 'WHAT IS IEDC?',
@@ -70,16 +72,15 @@ class AboutScreen extends StatelessWidget {
   Widget Objectives(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
+    final font = MediaQuery.textScaleFactorOf(context);
 
     List<String> str = [
       'to design and develop innovative products of social relevance.',
       'To build a strong student community that is on par with the current industry,',
-      'to design and develop innovative products',
-      'to design and develop innovative products',
-      'to design and develop innovative products',
-      'to design and develop innovative products',
-      'to design and develop innovative products',
-      'to design and develop innovative products',
+      'To set up an ecosystem that boosts innovative ideas among students',
+      'To provide ample oppurtunities for students to explore various domains',
+      'Encourage more women entrepreneurs.',
+      'To promote start-up initiatives from Faculty and Students.'
     ];
 
     return Container(
@@ -88,7 +89,7 @@ class AboutScreen extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.all(12.0),
-            child: Text('our object'),
+            child: Text('OUR OBJECTIVES',style: TextStyle(color: Colors.white,fontSize: font*35)),
           ),
           ListView.builder(
               shrinkWrap: true,
@@ -96,8 +97,8 @@ class AboutScreen extends StatelessWidget {
               itemCount: str.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  leading: Icon(Icons.abc),
-                  title: Text(str[index]),
+                  leading: Icon(Icons.circle,color: Colors.white,size: width/35,),
+                  title: Text(str[index],style: TextStyle(color: Colors.white,fontSize: font*18),),
                 );
               })
         ],

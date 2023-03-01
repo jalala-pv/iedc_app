@@ -5,7 +5,8 @@ class Containerpage extends StatelessWidget {
   String url;
   double height;
   double width;
-  Containerpage({required this.url, required this.height, required this.width});
+  double borderradius;
+  Containerpage({required this.url, required this.height, required this.width,this.borderradius=0});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class Containerpage extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         border: Border.all(),
+        borderRadius: BorderRadius.all(Radius.circular(borderradius)),
         image: DecorationImage(image: AssetImage(url), fit: BoxFit.contain),
       ),
     );
