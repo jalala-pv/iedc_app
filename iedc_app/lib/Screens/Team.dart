@@ -9,6 +9,7 @@ class Team extends StatelessWidget {
      final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
       final font = MediaQuery.textScaleFactorOf(context);
+      final space=SizedBox(height: height/5,);
 
     return Scaffold(
       body: SafeArea(
@@ -16,10 +17,33 @@ class Team extends StatelessWidget {
         
           children: [
             Center(child: Text('TEAM',style: headingstyle(font*50),)),
-            SizedBox(height: height/5,),
+            space,
             stack(personname: 'MUNEER VK',position: 'NODAL OFFICER',url: logo,),
-            SizedBox(height: height/5,),
-                    stack(personname: 'MUNEER VK',position: 'NODAL OFFICER',url: logo,),
+            space,
+            stack(personname: 'NIJAS ALI Z',position: 'CEO',url: logo,),
+            space,
+            stack(personname: 'MUHAMMED SHAHIL',position: 'CTO',url: logo,),
+            space,
+            stack(personname: 'SHAHID KP',position: 'CO-CTO',url: logo,),
+             space,
+            stack(personname: 'RAHBAR ZAHID',position: 'CO-CTO',url: logo,),
+            space,
+            stack(personname: 'HAIFA V',position: 'COO',url: logo,),
+            space,
+            stack(personname: 'NIZAL',position: 'CO-COO',url: logo,),
+            space,
+            stack(personname: 'HAYA',position: 'CO-COO',url: logo,),
+            space,
+            stack(personname: 'MUNEER VK',position: 'NODAL OFFICER',url: logo,),
+            space,
+            stack(personname: 'NIJAS ALI Z',position: 'CEO',url: logo,),
+            space,
+            stack(personname: 'MUHAMMED SHAHIL',position: 'CTO',url: logo,),
+            space,
+            stack(personname: 'SHAHID KP',position: 'CO-CTO',url: logo,),
+            
+
+
           ],
         ),
       ),

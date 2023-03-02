@@ -36,7 +36,7 @@ class stack extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(personname,
-                    style: TextStyle(color: Colors.white, fontSize: font * 25)),
+                    style: TextStyle(color: Colors.white, fontSize: font * 23)),
                 Text(position,
                     style: TextStyle(color: Colors.white, fontSize: font * 15))
               ],
