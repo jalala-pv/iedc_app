@@ -19,7 +19,6 @@ class stack extends StatelessWidget {
     final font = MediaQuery.textScaleFactorOf(context);
     return Stack(
       alignment: Alignment.center,
-   
       clipBehavior: Clip.none,
       children: [
         Positioned(
