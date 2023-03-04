@@ -5,8 +5,8 @@ import 'package:iedc_app/widgets/googlefonts.dart';
 import 'package:iedc_app/widgets/headdes.dart';
 
 class AboutScreen extends StatelessWidget {
-  const AboutScreen({super.key});
 
+List iedcimg=[logo,flower,logo,flower];
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -34,22 +34,14 @@ class AboutScreen extends StatelessWidget {
             subtitle: '@SSC AREEKODE',
             desc:
                 'The IEDC Club here @Sullamussalam is dedicated to its pursuit of boosting the innovative culture among its students. We strive to bridge the gap between concepts and services by letting students take complete control of the activities that we do here. Because its driven by the students the club stays active and motivated all year round with tech-talks, seminars, bootcamps, idea-contests and workshops'),
-        Padding(
+      ListView.builder(
+        shrinkWrap: true,
+        physics: ScrollPhysics(),
+        itemCount: iedcimg.length,itemBuilder: ((context, index) { return      Padding(
           padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 3, width: width / 3),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 3, width: width / 3),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 3, width: width / 3),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 3, width: width / 3),
-        ),
+          child: Containerpage(url: iedcimg[index], height: height / 3, width: width / 3),
+        );})),
+       
         Containerpage(url: logo, height: height / 1.5, width: width),
         headdes(
             title: 'MISSION',
@@ -93,6 +85,7 @@ class AboutScreen extends StatelessWidget {
           ),
           ListView.builder(
               shrinkWrap: true,
+              physics: ScrollPhysics(),
               scrollDirection: Axis.vertical,
               itemCount: str.length,
               itemBuilder: (context, index) {

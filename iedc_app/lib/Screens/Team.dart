@@ -4,6 +4,7 @@ import 'package:iedc_app/widgets/googlefonts.dart';
 import 'package:iedc_app/widgets/stack.dart';
 
 class Team extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;

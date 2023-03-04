@@ -34,10 +34,7 @@ class Achievementpage extends StatelessWidget {
                       },
                     ),
                   ),
-                  // Text(
-                  //   "${args['name']}",
-                  //   style: headingstyle(font*50),
-                  // ),
+             
                 ],
               ),
             ),
