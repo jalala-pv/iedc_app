@@ -16,13 +16,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+       // 'placepage': (context) => Achievementspage(),
+       
+      },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         
       ),
-      home: Home(),
+
     );
   }
 }
