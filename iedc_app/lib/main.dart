@@ -3,6 +3,7 @@ import 'package:iedc_app/Screens/Achievements.dart';
 import 'package:iedc_app/Screens/Contacts.dart';
 import 'package:iedc_app/Screens/Home.dart';
 import 'package:iedc_app/Screens/Team.dart';
+import 'package:iedc_app/widgets/Achievementpage.dart';
 import 'package:iedc_app/widgets/assets.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'Screens/About.dart';
@@ -19,7 +20,9 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
       routes: {
         '/': (context) => Home(),
-       // 'placepage': (context) => Achievementspage(),
+         'Achievementpage': (context) =>Achievementpage (),
+       
+      
        
       },
       debugShowCheckedModeBanner: false,

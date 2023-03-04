@@ -1,17 +1,17 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:iedc_app/widgets/ContainerPage.dart';
 import 'package:iedc_app/widgets/assets.dart';
-import 'package:iedc_app/widgets/eventpage.dart';
+
 import 'package:iedc_app/widgets/googlefonts.dart';
 
-import '../widgets/certificates.dart';
+import '../widgets/data.dart';
 
 class Achievements extends StatelessWidget {
-  final space = SizedBox(
-    height: 20,
-  );
+
+  /////////
+
+  var data = getData();
+////////
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -19,45 +19,39 @@ class Achievements extends StatelessWidget {
     final font = MediaQuery.textScaleFactorOf(context);
     return Scaffold(
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.all(40.0),
-        child: ListView(
-          children: [
-            Center(
-                child: Text(
-              'ACHIEVEMENTS',
-              style: headingstyle(font * 60),
-            )),
-            space,
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => certificates()));
-              },
-              child: Containerpage(
-                url: logo,
-                height: height / 2.5,
-                width: width / 3,
-                boxfit: BoxFit.cover,
-                borderradius: width / 20,
+          child: ListView(
+            
+            children: [
+              Center(child: Text('ACHIEVEMENTS',style: headingstyle(font*60),)),
+              Padding(
+                padding: const EdgeInsets.all(50),
+                child: ListView.builder(
+                      shrinkWrap: true,
+                   physics: ScrollPhysics(),
+                    itemCount: data.length,
+                    itemBuilder: (context, index) {
+                      return GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, 'Achievementpage',
+                                arguments: {
+                                  'name': data[index]['name'],
+                                  'place': data[index]['places'],
+                                });
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Containerpage(
+                                url: data[index]['url'].toString(),
+                                height: height / 2.5,
+                                width: width / 3,
+                                boxfit: BoxFit.cover,
+                                borderradius: width/20,),
+                          ),
+                              );
+                    }),
               ),
-            ),
-            space,
-            GestureDetector(
-              onTap:(){ Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Eventpage()));} ,
-              child: Containerpage(
-                url: logo,
-                  height: height / 2.5,
-                  width: width / 3,
-                borderradius: width / 20,
-                      boxfit: BoxFit.cover,
-                
-              ),
-            )
-          ],
-        ),
-      )),
+            ],
+          )),
     );
   }
 }
