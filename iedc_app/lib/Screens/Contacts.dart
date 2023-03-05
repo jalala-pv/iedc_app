@@ -3,9 +3,6 @@ import 'package:iedc_app/widgets/googlefonts.dart';
 import 'package:iedc_app/widgets/listtilepage.dart';
 
 class Contacts extends StatelessWidget {
- 
-
-
   @override
   Widget build(BuildContext context) {
     final font = MediaQuery.textScaleFactorOf(context);
@@ -65,7 +62,6 @@ class Contacts extends StatelessWidget {
                           icon: Icons.location_pin,
                           text: ' Ssc @Areekode, Malappuram, kerala',
                         ),
-                        
                       ],
                     ),
                   ),
