@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:iedc_app/widgets/assets.dart';
 
 List<Map<String, Object>> getData() {
@@ -34,3 +35,4 @@ List<Map<String, Object>> getData() {
   ];
   return data;
 }
+
