@@ -35,7 +35,7 @@ class Achievements extends StatelessWidget {
                             Navigator.pushNamed(context, 'Achievementpage',
                                 arguments: {
                                   'name': data[index]['name'],
-                                  'place': data[index]['places'],
+                                  'achieveimg': data[index]['achieveimg'],
                                 });
                           },
                           child: Padding(

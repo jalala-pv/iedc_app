@@ -75,14 +75,14 @@ class Achievementpage extends StatelessWidget {
           physics: ScrollPhysics(),
           crossAxisCount: 1,
           children: List.generate(
-            args['place'].length,
+            args['achieveimg'].length,
             (index) {
               return Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage(args['place'][index]['url']))),
+                        image: AssetImage(args['achieveimg'][index]['url']))),
                 margin:
                     EdgeInsets.only(top: 30, left: 50, right: 50, bottom: 30),
               );

@@ -5,7 +5,7 @@ List<Map<String, Object>> getData() {
     {
       'name': 'CERTIFICATES',
       'url': logo,
-      'places': [
+      'achieveimg': [
         {'url': flower},
         {'url': flower},
         {"url": flower},
@@ -21,7 +21,7 @@ List<Map<String, Object>> getData() {
     {
       'name': 'EVENTS',
       'url': flower,
-      'places': [
+      'achieveimg': [
         {'url': flower},
         {'url': flower},
         {"url": flower},
