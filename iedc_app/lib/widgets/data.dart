@@ -16,7 +16,6 @@ List<Map<String, Object>> getData() {
         {"url": flower},
         {"url": flower},
         {"url": flower},
-    
       ]
     },
     {
@@ -29,7 +28,6 @@ List<Map<String, Object>> getData() {
         {"url": flower},
         {'url': flower},
         {'url': flower},
-      
       ]
     },
   ];

@@ -43,8 +43,8 @@ class stack extends StatelessWidget {
           ),
         )),
         Positioned(
-            bottom: 95,
-            left: 135,
+            bottom: height/8,
+            left:width/3,
             child: Containerpage(
               url: logo,
               height: height / 4,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iedc_app/widgets/assets.dart';
+import 'package:iedc_app/widgets/data.dart';
 import 'package:iedc_app/widgets/googlefonts.dart';
 import 'package:iedc_app/widgets/stack.dart';
 
@@ -29,7 +30,7 @@ class Team extends StatelessWidget {
               style: desstyle(font * 30),
             )),
             space,
-            stack(
+                    stack(
               personname: 'MUNEER VK',
               position: 'NODAL OFFICER',
               url: logo,
@@ -137,6 +138,11 @@ class Team extends StatelessWidget {
               url: logo,
             ),
             space,
+            
+            
+            
+       
+
             Center(
                 child: Text(
               'SALT',
