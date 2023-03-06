@@ -78,10 +78,12 @@ class Achievementpage extends StatelessWidget {
             (index) {
               return Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage(args['achieveimg'][index]['url']))),
+                  borderRadius: BorderRadius.circular(25),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(args['achieveimg'][index]['url']),
+                  ),
+                ),
                 margin:
                     EdgeInsets.only(top: 30, left: 50, right: 50, bottom: 30),
               );
