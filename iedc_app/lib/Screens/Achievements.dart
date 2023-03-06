@@ -7,7 +7,6 @@ import 'package:iedc_app/widgets/googlefonts.dart';
 import '../widgets/data.dart';
 
 class Achievements extends StatelessWidget {
-
   /////////
 
   var data = getData();
@@ -20,38 +19,42 @@ class Achievements extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: ListView(
-            
-            children: [
-              Center(child: Text('ACHIEVEMENTS',style: headingstyle(font*60),)),
-              Padding(
-                padding: const EdgeInsets.all(50),
-                child: ListView.builder(
-                      shrinkWrap: true,
-                   physics: ScrollPhysics(),
-                    itemCount: data.length,
-                    itemBuilder: (context, index) {
-                      return GestureDetector(
-                          onTap: () {
-                            Navigator.pushNamed(context, 'Achievementpage',
-                                arguments: {
-                                  'name': data[index]['name'],
-                                  'achieveimg': data[index]['achieveimg'],
-                                });
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Containerpage(
-                                url: data[index]['url'].toString(),
-                                height: height / 2.5,
-                                width: width / 3,
-                                boxfit: BoxFit.cover,
-                                borderradius: width/20,),
-                          ),
-                              );
-                    }),
-              ),
-            ],
+        children: [
+          Center(
+              child: Text(
+            'ACHIEVEMENTS',
+            style: headingstyle(font * 60),
           )),
+          Padding(
+            padding: const EdgeInsets.all(50),
+            child: ListView.builder(
+                shrinkWrap: true,
+                physics: ScrollPhysics(),
+                itemCount: data.length,
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'Achievementpage',
+                          arguments: {
+                            'name': data[index]['name'],
+                            'achieveimg': data[index]['achieveimg'],
+                          });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Containerpage(
+                        url: data[index]['url'].toString(),
+                        height: height / 2.5,
+                        width: width / 3,
+                        boxfit: BoxFit.cover,
+                        borderradius: width / 20,
+                      ),
+                    ),
+                  );
+                }),
+          ),
+        ],
+      )),
     );
   }
 }

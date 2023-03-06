@@ -34,7 +34,6 @@ class Achievementpage extends StatelessWidget {
                       },
                     ),
                   ),
-             
                 ],
               ),
             ),
