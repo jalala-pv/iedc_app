@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iedc_app/widgets/data.dart';
 import 'package:iedc_app/widgets/googlefonts.dart';
-import 'package:iedc_app/widgets/listtilepage.dart';
 
 class Contacts extends StatelessWidget {
-
+  // var contacts=contactData();
   @override
   Widget build(BuildContext context) {
     final font = MediaQuery.textScaleFactorOf(context);
@@ -52,19 +51,24 @@ class Contacts extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white, fontSize: font * 15),
                         ),
-                        contactListtile(
-                          icon: Icons.call,
-                          text: '+91 7306096088',
-                        ),
-                        contactListtile(
-                          icon: Icons.mail,
-                          text: 'iedcsscollege@gmail.com',
-                        ),
-                        contactListtile(
-                          icon: Icons.location_pin,
-                          text: ' Ssc @Areekode, Malappuram, kerala',
-                        ),
-                     
+                        ListView.builder(
+                            physics: ScrollPhysics(),
+                            shrinkWrap: true,
+                            itemCount: ListData().content.length,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                leading: Icon(
+                                  ListData().content[index].icon,
+                                  color: Color.fromARGB(255, 241, 117, 158),
+                                ),
+                                title: Text(
+                                  ListData().content[index].text,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              );
+                            })
                       ],
                     ),
                   ),
