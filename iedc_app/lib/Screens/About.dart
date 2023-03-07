@@ -5,8 +5,7 @@ import 'package:iedc_app/widgets/googlefonts.dart';
 import 'package:iedc_app/widgets/headdes.dart';
 
 class AboutScreen extends StatelessWidget {
-
-List iedcimg=[logo,flower,logo,flower];
+  List iedcimg = [logo, flower, logo, flower];
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -18,7 +17,7 @@ List iedcimg=[logo,flower,logo,flower];
         Containerpage(url: logo, height: height, width: width),
         Padding(
           padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 3, width: width ),
+          child: Containerpage(url: logo, height: height / 3, width: width),
         ),
         headdes(
             title: 'WHAT IS IEDC?',
@@ -34,14 +33,17 @@ List iedcimg=[logo,flower,logo,flower];
             subtitle: '@SSC AREEKODE',
             desc:
                 'The IEDC Club here @Sullamussalam is dedicated to its pursuit of boosting the innovative culture among its students. We strive to bridge the gap between concepts and services by letting students take complete control of the activities that we do here. Because its driven by the students the club stays active and motivated all year round with tech-talks, seminars, bootcamps, idea-contests and workshops'),
-      ListView.builder(
-        shrinkWrap: true,
-        physics: ScrollPhysics(),
-        itemCount: iedcimg.length,itemBuilder: ((context, index) { return      Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: iedcimg[index], height: height / 3, width: width / 3),
-        );})),
-       
+        ListView.builder(
+            shrinkWrap: true,
+            physics: ScrollPhysics(),
+            itemCount: iedcimg.length,
+            itemBuilder: ((context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: Containerpage(
+                    url: iedcimg[index], height: height / 3, width: width / 3),
+              );
+            })),
         Containerpage(url: logo, height: height / 1.5, width: width),
         headdes(
             title: 'MISSION',
@@ -81,7 +83,8 @@ List iedcimg=[logo,flower,logo,flower];
         children: [
           Padding(
             padding: EdgeInsets.all(12.0),
-            child: Text('OUR OBJECTIVES',style: TextStyle(color: Colors.white,fontSize: font*35)),
+            child: Text('OUR OBJECTIVES',
+                style: TextStyle(color: Colors.white, fontSize: font * 35)),
           ),
           ListView.builder(
               shrinkWrap: true,
@@ -90,8 +93,15 @@ List iedcimg=[logo,flower,logo,flower];
               itemCount: str.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  leading: Icon(Icons.circle,color: Colors.white,size: width/35,),
-                  title: Text(str[index],style: TextStyle(color: Colors.white,fontSize: font*18),),
+                  leading: Icon(
+                    Icons.circle,
+                    color: Colors.white,
+                    size: width / 35,
+                  ),
+                  title: Text(
+                    str[index],
+                    style: TextStyle(color: Colors.white, fontSize: font * 18),
+                  ),
                 );
               })
         ],
