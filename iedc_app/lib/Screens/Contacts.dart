@@ -3,7 +3,6 @@ import 'package:iedc_app/widgets/data.dart';
 import 'package:iedc_app/widgets/googlefonts.dart';
 
 class Contacts extends StatelessWidget {
-  // var contacts=contactData();
   @override
   Widget build(BuildContext context) {
     final font = MediaQuery.textScaleFactorOf(context);
