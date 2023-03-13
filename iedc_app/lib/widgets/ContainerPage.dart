@@ -9,7 +9,7 @@ class Containerpage extends StatelessWidget {
   BoxFit boxfit;
  
 
-  Containerpage({required this.url, required this.height, required this.width,this.borderradius=0,this.boxfit=BoxFit.contain});
+  Containerpage({required this.url, required this.height, required this.width,this.borderradius=0,this.boxfit=BoxFit.cover});
 
   @override
   Widget build(BuildContext context) {

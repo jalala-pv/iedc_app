@@ -5,7 +5,7 @@ import 'package:iedc_app/widgets/googlefonts.dart';
 import 'package:iedc_app/widgets/headdes.dart';
 
 class AboutScreen extends StatelessWidget {
-  List iedcimg = [logo, flower, logo, flower];
+  List iedcimg = [lab, lab3, lap, grp1];
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -14,10 +14,10 @@ class AboutScreen extends StatelessWidget {
 
     return ListView(
       children: [
-        Containerpage(url: logo, height: height, width: width),
+        Containerpage(url: lap, height: height, width: width),
         Padding(
           padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 3, width: width),
+          child: Containerpage(url: lab, height: height / 3, width: width),
         ),
         headdes(
             title: 'WHAT IS IEDC?',
@@ -44,7 +44,7 @@ class AboutScreen extends StatelessWidget {
                     url: iedcimg[index], height: height / 3, width: width / 3),
               );
             })),
-        Containerpage(url: logo, height: height / 1.5, width: width),
+        Containerpage(url: visionn, height: height / 1.5, width: width),
         headdes(
             title: 'MISSION',
             subtitle: 'VISION',
@@ -52,11 +52,11 @@ class AboutScreen extends StatelessWidget {
                 'To equip students with the latest technical skills and develop an inventive mindset among them.To assemble an empowering community that serves as a hotspot for solutions, with the welfare of the society in its mind.'),
         Padding(
           padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 2, width: width / 3),
+          child: Containerpage(url: mission, height: height / 2, width: width / 3),
         ),
         Padding(
           padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: logo, height: height / 2, width: width / 3),
+          child: Containerpage(url: vision, height: height / 2, width: width / 3),
         ),
         Objectives(context),
       ],

@@ -5,7 +5,7 @@ import 'package:iedc_app/widgets/googlefonts.dart';
 import '../widgets/assets.dart';
 
 class EventScreen extends StatelessWidget {
-  List event = [logo, flower, logo, logo, logo, logo, logo, logo];
+  List event = [idea, flower, logo, logo, logo, logo, logo, logo];
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -23,10 +23,10 @@ class EventScreen extends StatelessWidget {
             itemCount: event.length,
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
+                padding: const EdgeInsets.only(top: 50, left: 70, right: 70),
                 child: Containerpage(
                   url: event[index],
-                  height: height / 2.5,
+                  height: height / 2,
                   width: width,
                   borderradius: width / 20,
                   boxfit: BoxFit.cover,
