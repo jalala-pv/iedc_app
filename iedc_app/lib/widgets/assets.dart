@@ -11,3 +11,4 @@ String visionn= "assets/visionn.jpg";
 String mission= "assets/mission.jpg";
 String vision= "assets/vision.jpg";
 String idea= "assets/idea.jpeg";
+String cert= "assets/cert.jpg";
