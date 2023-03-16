@@ -29,10 +29,13 @@ class TeamMemberList extends StatelessWidget {
           itemBuilder: (context, index) {
             return Column(
               children: [
-                stack(
-                  personname: list[index].name,
-                  position: list[index].position,
-                  url: list[index].image,
+                GestureDetector(
+              
+                  child: stack(
+                    personname: list[index].name,
+                    position: list[index].position,
+                    url: list[index].image,
+                  ),
                 ),
                 SizedBox(
                   height: height / 5,
