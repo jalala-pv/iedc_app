@@ -44,7 +44,7 @@ class AboutScreen extends StatelessWidget {
                     url: iedcimg[index], height: height / 3, width: width / 3),
               );
             })),
-        Containerpage(url: visionn, height: height / 1.5, width: width),
+        Containerpage(url:visionn, height: height / 1.5, width: width),
         headdes(
             title: 'MISSION',
             subtitle: 'VISION',
@@ -52,7 +52,7 @@ class AboutScreen extends StatelessWidget {
                 'To equip students with the latest technical skills and develop an inventive mindset among them.To assemble an empowering community that serves as a hotspot for solutions, with the welfare of the society in its mind.'),
         Padding(
           padding: const EdgeInsets.all(30.0),
-          child: Containerpage(url: mission, height: height / 2, width: width / 3),
+          child: Containerpage(url:mission, height: height / 2, width: width / 3),
         ),
         Padding(
           padding: const EdgeInsets.all(30.0),

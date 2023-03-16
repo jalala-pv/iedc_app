@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 String grp1 = "assets/App_images/grp1.jpg";
 String lab = "assets/App_images/lab.jpg";
 String lap = "assets/App_images/lap.jpg";
-String flu = "assetsApp_images//flu.jpg";
+String flu = "assets/App_images/flu.jpg";
 String lab3= "assets/App_images/lab3.jpg";
 String visionn= "assets/App_images/visionn.jpg";
 String mission= "assets/App_images/mission.jpg";
