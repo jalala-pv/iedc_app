@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iedc_app/widgets/assets.dart';
 import 'package:iedc_app/widgets/data.dart';
 import 'package:iedc_app/widgets/googlefonts.dart';
 
@@ -20,20 +21,20 @@ class Contacts extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.only(top:12.0,left:12.0,right: 12),
             child: Text(
               'Any questions or remark?Just write us a message!',
               style: TextStyle(fontSize: font * 20),
             ),
           ),
           Padding(
-              padding: const EdgeInsets.all(40.0),
+              padding: EdgeInsets.only(left:width/4.75,right:width/4.75 ,top: width/10),
               child: Container(
                 width: width,
                 height: height / 2,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.purple),
+                   image: DecorationImage(image: AssetImage(contactbg))),
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Padding(

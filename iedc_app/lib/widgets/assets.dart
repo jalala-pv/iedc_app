@@ -18,3 +18,6 @@ String poster5= "assets/App_images/poster5.jpeg";
 String poster6= "assets/App_images/poster6.jpeg";
 String Trainthetrainers= "assets/App_images/Trainthetrainers.jpeg";
 String download= "assets/App_images/download.jpeg";
+String event1 = "assets/App_images/ash.jpg";
+String event2= "assets/App_images/poster4.png";
+String contactbg= "assets/App_images/background.png";
