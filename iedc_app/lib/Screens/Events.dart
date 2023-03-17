@@ -5,7 +5,7 @@ import 'package:iedc_app/widgets/googlefonts.dart';
 import '../widgets/assets.dart';
 
 class EventScreen extends StatelessWidget {
-  List event = [idea, flower, logo, logo, logo, logo, logo, logo];
+  List event = [idea, poster3, poster4, poster5,poster6, Trainthetrainers, download, logo];
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;

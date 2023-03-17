@@ -27,7 +27,9 @@ class AboutScreen extends StatelessWidget {
         SizedBox(
           height: 30,
         ),
-        Containerpage(url: logo, height: height / 1.5, width: width),
+        Opacity(
+          opacity: 0.5,
+          child: Containerpage(url: grp1, height: height / 1.5, width: width)),
         headdes(
             title: 'IEDC',
             subtitle: '@SSC AREEKODE',
