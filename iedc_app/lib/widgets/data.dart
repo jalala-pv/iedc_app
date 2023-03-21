@@ -20,11 +20,11 @@ List<Map<String, Object>> getData() {
       ]
     },
     {
-      'name': 'EVENTS',
+      'name': 'EVENT winners',
       'url': flower,
       'achieveimg': [
         {'url': event1},
-        {'url': event2},
+        {'url': flower},
         {"url": flower},
         {"url": flower},
         {'url': flower},
